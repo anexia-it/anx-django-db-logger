@@ -22,6 +22,7 @@ setup(
     license='MIT License',
     description='Django logging in database',
     long_description=README,
+    long_description_content_type="text/markdown",
     url='https://github.com/CiCiUi/django-db-logger',
     author='zhangshine',
     author_email='zhangshine0125@gmail.com',
