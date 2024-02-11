@@ -14,18 +14,19 @@ def local_scheme(version):
 
 setup(
     name='django-db-logger',
-    version='0.1.12',
+    version='0.2.1',
     use_scm_version={"local_scheme": local_scheme} if os.getenv('TestPypi') == 'yes' else False,  # using `setuptools_scm` when publish to test.pypi
-    setup_requires=['setuptools_scm'],
+    setup_requires=['setuptools_scm==7.1.0'],
     packages=['django_db_logger', 'django_db_logger.migrations'],
     include_package_data=True,
     license='MIT License',
     description='Django logging in database',
     long_description=README,
+    long_description_content_type="text/markdown",
     url='https://github.com/CiCiUi/django-db-logger',
     author='zhangshine',
     author_email='zhangshine0125@gmail.com',
-    install_requires=['django>=1.9', 'six'],
+    install_requires=['django>=3.2', 'six'],
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
@@ -33,10 +34,7 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
         'Programming Language :: Python :: 3.9',
         'Topic :: Internet :: WWW/HTTP',
